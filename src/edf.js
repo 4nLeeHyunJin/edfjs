@@ -104,7 +104,7 @@ export default class EDF {
     if (this.num_channels == 0) {
       return null;
     }
-    assert(['EDF', 'EDF+C'].includes(this.type), `Unsupported EDF type: ${this.type}`);
+    // assert(['EDF', 'EDF+C'].includes(this.type), `Unsupported EDF type: ${this.type}`);
     // channels
     const ch = string_from_buffer(buffer, this.header_bytes, this.num_header_bytes);
     this.read_channel_header_from_string(ch);
